@@ -5,12 +5,13 @@
 Summary:	Ugly GStreamer Streaming-media framework plugins
 Name:		gstreamer010-plugins-ugly
 Version:	0.10.19
-Release:	3
+Release:	4
 License:	LGPL
 Group:		Libraries
 Source0:	http://gstreamer.freedesktop.org/src/gst-plugins-ugly/%{gstname}-%{version}.tar.bz2
 # Source0-md5:	1d81c593e22a6cdf0f2b4f57eae93df2
 Patch0:		%{name}-amr.patch
+Patch1:		%{name}-new-cdio.patch
 URL:		http://gstreamer.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -23,7 +24,7 @@ BuildRequires:	orc-devel >= 0.4.5
 BuildRequires:	pkg-config
 #
 BuildRequires:	lame-libs-devel
-BuildRequires:	libcdio-devel
+BuildRequires:	libcdio-paranoia-devel
 BuildRequires:	libdvdnav-devel
 BuildRequires:	libid3tag-devel
 BuildRequires:	libmad-devel
@@ -54,6 +55,7 @@ gstreamer-plugins-ugly API documentation.
 %prep
 %setup -qn %{gstname}-%{version}
 %patch0 -p0
+%patch1 -p1
 
 %build
 %{__autopoint}
