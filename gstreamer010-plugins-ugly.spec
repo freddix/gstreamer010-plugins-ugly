@@ -5,7 +5,7 @@
 Summary:	Ugly GStreamer Streaming-media framework plugins
 Name:		gstreamer010-plugins-ugly
 Version:	0.10.19
-Release:	4
+Release:	5
 License:	LGPL
 Group:		Libraries
 Source0:	http://gstreamer.freedesktop.org/src/gst-plugins-ugly/%{gstname}-%{version}.tar.bz2
